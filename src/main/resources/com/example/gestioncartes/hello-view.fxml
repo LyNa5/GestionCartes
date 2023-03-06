@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.gestioncartes.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText"/>
+    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+</VBox>-->
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<?impoort de.  ?>
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.gestioncartes.HelloController">
+    <children>
+        <VBox layoutX="14.0" layoutY="113.0" prefHeight="157.0" prefWidth="62.0" spacing="25.0">
+            <children>
+                <Label styleClass="labelform" stylesheets="@style.css" text="N°" />
+                <Label layoutX="10.0" layoutY="10.0" styleClass="labelform" stylesheets="@style.css" text="RECTO" />
+                <Label layoutX="10.0" layoutY="27.0" styleClass="labelform" stylesheets="@style.css" text="VERSO" />
+            </children>
+        </VBox>
+        <VBox layoutX="76.0" layoutY="113.0" prefHeight="157.0" prefWidth="180.0" spacing="15.0">
+            <children>
+                <TextField fx:id="id" editable="false" styleClass="field" stylesheets="@style.css" />
+                <TextField fx:id="recto" layoutX="10.0" layoutY="10.0" styleClass="field" stylesheets="@style.css" />
+                <TextField fx:id="verso" layoutX="10.0" layoutY="35.0" styleClass="field" stylesheets="@style.css" />
+            </children>
+        </VBox>
+        <Button fx:id="bsave" layoutX="14.0" layoutY="298.0" mnemonicParsing="false" onAction="#saveEvent" prefHeight="33.0"
+                prefWidth="71.0" styleClass="btn" stylesheets="@style.css" text="Save">
+            <graphic>
+                <!--<FontAwesomeIconView fill="#5d0fe4" glyphName="SAVE" size="20.0"/> -->
+            </graphic>
+            <font>
+                <Font name="Times New Roman Bold" size="12.0" />
+            </font>
+        </Button>
+        <Button fx:id="bupdate" layoutX="104.0" layoutY="298.0" mnemonicParsing="false" onAction="#updateEvent"
+                prefHeight="33.0" prefWidth="71.0" styleClass="btn" stylesheets="@style.css" text="Edit">
+            <graphic>
+                <!-- <FontAwesomeIconView fill="#5d0fe4" glyphName="EDIT" size="20.0"></FontAwesomeIconView>-->
+             </graphic>
+             <font>
+                 <Font name="Times New Roman Bold" size="12.0" />
+             </font>
+         </Button>
+         <Button fx:id="bdelete" layoutX="199.0" layoutY="298.0" mnemonicParsing="false" onAction="#deleteEvent"
+                 prefHeight="33.0" prefWidth="71.0" styleClass="btn" stylesheets="@style.css" text="Delete">
+             <graphic>
+                 <!--  <FontAwesomeIconView fill="#f50606" glyphName="REMOVE" size="20.0"></FontAwesomeIconView>-->
+               </graphic>
+               <font>
+                   <Font name="Times New Roman" size="12.0" />
+               </font>
+           </Button>
+           <Button layoutX="104.0" layoutY="349.0" mnemonicParsing="false" onAction="#clearEvent" prefHeight="33.0"
+                   prefWidth="71.0" styleClass="btn" stylesheets="@style.css" text="Reset">
+               <font>
+                   <Font name="Times New Roman Bold" size="12.0" />
+               </font>
+               <graphic>
+                   <!-- <MaterialDesignIconView fill="#470ec3" glyphName="FORMAT_CLEAR" size="20.0" /> -->
+                </graphic>
+            </Button>
+            <TableView fx:id="table" layoutX="284.0" layoutY="113.0" onMouseClicked="#tablehandleButtonAction"
+                       prefHeight="212.0" prefWidth="481.0">
+                <columns>
+                    <TableColumn fx:id="colid" prefWidth="110.0" text="N°" />
+                    <TableColumn fx:id="colrecto" prefWidth="127.0" text="RECTO" />
+                    <TableColumn fx:id="colverso" prefWidth="121.0" text="VERSO" />
+                </columns>
+            </TableView>
+            <Pane layoutX="99.0" layoutY="16.0" prefHeight="76.0" prefWidth="634.0" stylesheets="@style.css">
+                <children>
+                    <Label layoutX="113.0" layoutY="11.0" text="GEST CARTES" textFill="#ffc300">
+                        <font>
+                            <Font name="Arial Bold" size="48.0" />
+                        </font>
+                        <graphic>
+                            <!-- <FontAwesomeIconView glyphName="CODE" size="48.0" /> -->
+                        </graphic>
+                    </Label>
+                </children>
+            </Pane>
+        </children>
+    </AnchorPane>
